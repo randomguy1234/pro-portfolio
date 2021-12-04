@@ -1,0 +1,8 @@
+/*reset html defaults*/
+ *{
+    margin: 0;
+    padding: 0;
+    /*think about box-sizing for this case*/
+ }
+
+ /*add html 1st, then add here*/
