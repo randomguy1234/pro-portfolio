@@ -5,4 +5,64 @@
     /*think about box-sizing for this case*/
  }
 
+/*global variables*/
+:root{
+   --big-size: 36px;
+   --mid-size: 24px;
+   --small-size: 10px;
+}
+
+body{
+   background-color: grey;
+   color: white;
+}
+
  /*add html 1st, then add here*/
+ 
+.name{
+   font-size: 36px;
+   font-weight: bold;
+}
+
+
+ /*resize img*/
+.personal-img {
+   height: 240px;
+   width: 180px;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   top: 50%;
+   left: 2%;
+}
+
+header{
+   background-image: url("../images/android-image.jfif");
+   width: 100%;
+   height: 100%;
+}
+
+header a{
+   text-decoration: none;
+}
+
+ /*move nav links to side of image, right of page*/
+ header nav ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   position: absolute;
+   top: 5px;
+   right: var(--small-size);
+   list-style: none;
+   font-size: var(--mid-size);
+}
+
+header nav ul li{
+   padding: var(--small-size);
+}
+
+.subtitle{
+   text-align: right;
+}
+
