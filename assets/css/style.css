@@ -12,30 +12,14 @@
    --small-size: 10px;
 }
 
+/*general styling for the page*/
 body{
    background-color: grey;
    color: white;
 }
 
- /*add html 1st, then add here*/
  
-.name{
-   font-size: 36px;
-   font-weight: bold;
-}
-
-
- /*resize img*/
-.personal-img {
-   height: 240px;
-   width: 180px;
-   display: flex;
-   flex-wrap: wrap;
-   position: relative;
-   top: 50%;
-   left: 2%;
-}
-
+/*start of header section*/
 header{
    background-image: url("../images/android-image.jfif");
    width: 100%;
@@ -46,7 +30,7 @@ header a{
    text-decoration: none;
 }
 
- /*move nav links to side of image, right of page*/
+/*move nav links to right of page*/
  header nav ul{
    display: flex;
    flex-wrap: wrap;
@@ -66,3 +50,30 @@ header nav ul li{
    text-align: right;
 }
 
+.name{
+   font-size: 36px;
+   font-weight: bold;
+}
+
+
+/*resize img*/
+.personal-img {
+   height: 240px;
+   width: 180px;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   top: 50%;
+   left: 2%;
+}
+
+/*end of header section*/
+
+/*start of footer section*/
+
+footer ul li{
+   display: inline;
+   list-style: none;
+   padding: var(--small-size);
+   text-align: center;
+}
