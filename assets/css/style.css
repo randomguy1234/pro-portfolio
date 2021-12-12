@@ -1,33 +1,42 @@
 /*reset html defaults*/
  *{
-    margin: 0;
-    padding: 0;
-    /*think about box-sizing for this case*/
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
  }
+
 
 /*global variables*/
 :root{
    --big-size: 36px;
    --mid-size: 24px;
    --small-size: 10px;
+   --main-color: grey;
+   --text-color1: white;
+   --backup-color: royalblue;
 }
+
 
 /*general styling for the page*/
 body{
-   background-color: grey;
-   color: white;
+   background-color: var(--main-color);
+   color: var(--text-color1);
+}
+
+section h2, footer h2{
+   margin-bottom: var(--small-size);
 }
 
  
 /*start of header section*/
 header{
    background-image: url("../images/android-image.jfif");
-   width: 100%;
-   height: 100%;
+   
 }
 
 header a{
    text-decoration: none;
+   color: var(--text-color1);
 }
 
 /*move nav links to right of page*/
@@ -55,7 +64,6 @@ header nav ul li{
    font-weight: bold;
 }
 
-
 /*resize img*/
 .personal-img {
    height: 240px;
@@ -69,6 +77,64 @@ header nav ul li{
 
 /*end of header section*/
 
+section p{
+   margin-bottom: var(--mid-size);
+}
+
+/*start of work section*/
+
+.flexbox{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+/*set up sizing for all background imgs*/
+.content1, .content2, .content3{
+   background-position: center;
+   background-size: cover;
+   height: 360px;
+   width: 360px;
+
+}
+
+.content1:hover, .content2:hover, .content3:hover{
+   background:rgba(65, 105, 225, 0.5);
+}
+
+
+.content1{
+   background-image: url("../images/run-buddy-snapshot.png");
+   width: 720px; 
+}
+
+.content2{
+   background-image: url("../images/sql-image.jpg");
+}
+
+.content3{
+   background-image: url("../images/react-image.jpg");
+}
+
+
+div a{
+   text-decoration: none;
+}
+
+div a p{
+   background-color: rgba(128, 128,128, 0.75);
+   color: var(--text-color1);
+   border-radius: 15px;
+   height: 100px;
+   width: 200px;
+   margin-top: 260px;
+ 
+}
+
+/*end of work section*/
+
+
+
 /*start of footer section*/
 
 footer ul li{
@@ -76,4 +142,108 @@ footer ul li{
    list-style: none;
    padding: var(--small-size);
    text-align: center;
+}
+
+/*end of footer section*/
+
+
+/*media query for screens up to 980px width*/
+
+@media screen and (max-width: 980px){
+   section h2, footer h2{
+      
+      float: left;
+      border-right: 5px solid var(--backup-color);
+      line-height: 5;
+   }
+   
+   
+   .personal-img{
+      margin: 0;
+   }
+
+   .subtitle{
+      position: relative;
+      bottom: var(--small-size);
+      right: var(--small-size);
+
+   }
+
+   section #about-me{
+      margin-top: 5px;
+      margin-left: 0px;
+   }
+
+   section p{
+      margin-left: 150px;
+   }
+
+
+   section #work{
+     margin-top: 70px;
+     margin-left: -65px;
+   }
+
+
+   div a p{
+      margin-left: 0px;
+   }
+
+
+   footer ul li{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 140px;
+      
+   }
+
+   
+}
+
+
+/*media query for screens up to 768px width*/
+
+@media screen and (max-width: 768px){
+   header{
+      background-size: cover;
+      background-position: center;
+   }
+   
+   .content1, .content2, .content3{
+      height: 180px;
+      width: 180px;
+   }
+
+   .content1{
+      width: 240px;
+   }
+
+   div a p{
+      margin-top: 50px;
+      height: 80px;
+      width: 100px;
+   }
+
+   footer #contact-me{
+      margin-top: 30px;
+   }
+}
+
+/*media query for screens up to 575px widths*/
+@media screen and (max-width: 5757px) {
+   
+   .name{
+      font-size:var(--mid-size);
+   }
+   
+   .personal-img{
+      height: 120px;
+      width: 100px;
+   }
+
+   .flexbox{
+      margin-bottom: var(--small-size);
+   }
+   
 }
